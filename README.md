@@ -1,17 +1,18 @@
-# EXT:rainbow - A Feminine Pink Theme for the TYPO3 Backend
+# EXT:rainbow - Make the TYPO3 backend yours! 
 
 ## Features
 
-- Replaces the default TYPO3 backend blue with a vibrant hot-pink colour scheme
+- Replaces the default TYPO3 backend blue with a default, vibrant hot-pink colour scheme
 - Colours the topbar and sidebar in a vivid rose pink
 - Tints every content area, panel, card, and context menu in soft blush pink
 - Styles the login screen — button, highlight, and panel background — in matching pink
 - Works in both light and dark mode (dark mode surfaces render as warm plum)
 - No configuration, no database records — install and it just works
+- Enables you to choose your prefered color for the backend layout
 
 ## How it Works
 
-The TYPO3 13 backend colour system is driven by two root CSS custom properties:
+The TYPO3 14 backend colour system is driven by two root CSS custom properties:
 
 - `--token-color-primary-base` — source of all primary-derived colours (buttons, badges, active states, focus rings, and the scaffold header/sidebar gradient)
 - `--token-color-neutral-base` — source of the full neutral scale from which every surface colour is derived via `hsl(from <base> h s <lightness>%)`
