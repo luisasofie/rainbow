@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="messages" date="2026-04-14" product-name="rainbow">
+        <header/>
+        <body>
+            <trans-unit id="user_settings.rainbow_primaryColor">
+                <source>Rainbow: Preferred colour</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
