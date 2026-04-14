@@ -36,7 +36,7 @@ Or install and activate via the TYPO3 Extension Manager.
 
 ## Requirements
 
-- TYPO3 13.x
+- TYPO3 14.x
 - `typo3/cms-backend`
 - `typo3/cms-core`
 

@@ -4,8 +4,8 @@
 	"description": "A feminine pink color scheme for the TYPO3 backend — because pink is power.",
 	"license": "GPL-2.0-or-later",
 	"require": {
-		"typo3/cms-backend": "*",
-		"typo3/cms-core": "*"
+		"typo3/cms-backend": "^14.0",
+		"typo3/cms-core": "^14.0"
 	},
 	"extra": {
 		"typo3/cms": {
