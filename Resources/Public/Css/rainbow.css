@@ -1,0 +1,71 @@
+/*
+ * Rainbow — Feminine Pink Theme for the TYPO3 Backend
+ *
+ * Three levers in the TYPO3 13 token system:
+ *
+ *  1. --token-color-primary-base
+ *     Root of every primary-derived colour (buttons, active states, badges,
+ *     focus rings). The scaffold header/sidebar bg is also computed from it
+ *     via  hsl(from <primary> h calc(s*.67) 20%).
+ *
+ *  2. --token-color-neutral-base
+ *     Root of the entire neutral scale (token-color-neutral-1 … 92).
+ *     Every surface variable — content area, panels, context menus, cards —
+ *     is hsl(from <neutral-base> h s <lightness>%).
+ *     Overriding it to a pink-hued colour makes all light-mode backgrounds
+ *     blush-pink and dark-mode backgrounds warm plum.
+ *
+ *  3. --typo3-scaffold-header-bg / --typo3-scaffold-sidebar-bg
+ *     Explicit overrides to raise the sidebar lightness (20% → 38%) and
+ *     increase saturation so it reads as vivid pink, not near-black maroon.
+ */
+
+/* ─── Primary colour ─────────────────────────────────────────────────────── */
+/*
+ * #e91e8c = Material Design "Pink A400" — vibrant, unmistakably hot pink.
+ * HSL ≈ hsl(329, 81%, 52%)
+ */
+
+:root {
+    --token-color-primary-base: #e91e8c;
+}
+
+/* ─── Surface tint (content area, context menus, cards, panels) ──────────── */
+/*
+ * --token-color-neutral-base feeds hsl(from <base> h s <lightness>%) for every
+ * neutral token.  Setting it to hsl(329, 38%, 50%) means:
+ *   light-mode surface-base  → hsl(329, 38%, 93%)  = clear blush pink
+ *   light-mode context-menu  → hsl(329, 38%, 96%)  = softer blush
+ *   dark-mode  surface-base  → hsl(329, 38%, 16%)  = warm dark plum  ✓
+ */
+
+:root {
+    --token-color-neutral-base: hsl(329, 38%, 50%);
+}
+
+/* ─── Sidebar & topbar ───────────────────────────────────────────────────── */
+/*
+ * Default formula: hsl(from <primary> h calc(s*.67) 20%) → lightness 20%, very dark.
+ * Override: keep the primary hue, use full saturation * .88, raise to 38% lightness
+ * → a vivid medium-rose bar that is clearly colourful, not near-black.
+ */
+
+:root {
+    --typo3-scaffold-header-bg: hsl(from var(--token-color-primary-base) h calc(s * .88) 38%);
+    --typo3-scaffold-sidebar-bg: hsl(from var(--token-color-primary-base) h calc(s * .88) 38%);
+}
+
+/* ─── Login page ─────────────────────────────────────────────────────────── */
+
+.typo3-login {
+    --typo3-login-highlight: #e91e8c;
+    --typo3-login-bg: #fff0f7;
+    --typo3-login-btn-bg: #e91e8c;
+    --typo3-login-btn-color: #fff;
+}
+
+/* ─── Focus rings ────────────────────────────────────────────────────────── */
+
+:root {
+    --bs-focus-ring-color: rgba(233, 30, 140, 0.25);
+}

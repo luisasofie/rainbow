@@ -1,0 +1,15 @@
+{
+	"name": "luisasofie/rainbow",
+	"type": "typo3-cms-extension",
+	"description": "A feminine pink color scheme for the TYPO3 backend — because pink is power.",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"typo3/cms-backend": "*",
+		"typo3/cms-core": "*"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "rainbow"
+		}
+	}
+}
